@@ -4,5 +4,13 @@ Departments
 {% endblock %}
 
 {% block content%}
-<h2>welcome to Departments page</h2>
+<h1 class="text-center">Our Depertments</h1>
+<hr>
+
+{% for d in dept%}
+<div class="mx-auto w-50 bg-success text-center text-white p-5 my-3 border border-warning round">
+<h1>{{d.dep_name}}</h1>
+<p>{{d.dep_description}}</p>
+</div>
+{% endfor %}
 {% endblock %}
