@@ -6,13 +6,16 @@ def index(request):
     return render(request, 'index.html')
 
 def about(request):
-    return HttpResponse("about page") 
+    return render(request, 'about.html')
 
 def booking(request):
-    return HttpResponse("booking page")    
+    return render(request, 'booking.html')    
 
 def doctors(request):
-    return HttpResponse("doctors page") 
+    return render(request, 'doctors.html')
 
 def contact(request):
-    return HttpResponse("contact page")          
+    return render(request, 'contact.html')
+
+def departments(request):
+    return render(request, 'departments.html')             
