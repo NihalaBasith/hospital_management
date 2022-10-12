@@ -2,6 +2,7 @@ from django import forms
 
 
 from .models import Booking
+from .models import Contact
 
 class DateInput(forms.DateInput):
     input_type = 'date'
@@ -24,4 +25,9 @@ class BookingForm(forms.ModelForm):
            'doc_name':'Doctor Name',
            'booking_date':'Booking Date',
         }
+       
+class ContactForm(forms.ModelForm):
+    class Meta:
+        model = Contact
+        fields = '__all__'
        

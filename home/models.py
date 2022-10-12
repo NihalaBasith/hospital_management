@@ -30,3 +30,12 @@ class Booking(models.Model):
     doc_name = models.ForeignKey(Doctors, on_delete=models.CASCADE)
     booking_date = models.DateField()
     booked_on = models.DateField(auto_now=True)
+
+
+class Contact(models.Model):
+    email = models.EmailField()
+    subject = models.CharField(max_length=255)
+    message = models.TextField()
+
+    def __str__(self):
+        return self.email    
